@@ -15,7 +15,7 @@ try {
 
 router.get('/:id', async (req, res) => {
   try {
-    const data = Category.findByPk(req.params.id, { include: [{model: Product}]})
+    const data = await Category.findByPk(req.params.id, { include: [{model: Product}]})
     res.status(200).json(data)
   }
   catch (err){
@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   const data= await Category.update(req.body,{
     where: {
       id:req.params.id
@@ -50,6 +50,8 @@ router.delete('/:id', async (req, res) => {
      id: req.params.id
    }
  })
+ console.log(res.status(200) + "Item removed")
+
   // delete a category by its `id` value
 });
 
