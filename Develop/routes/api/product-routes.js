@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
   try{
   // find all products
   // be sure to include its associated Category and Tag data
-const data = await Product.findall({include: [{model: Category}, {model:Tag}]})
+const data = await Product.findAll({include: [{model:Category}, {model:Tag}]})
 res.status(200).json(data)
 } catch (err){
   res.status(500).json(err)
@@ -20,14 +20,15 @@ router.get('/:id', async (req, res) => {
   try{
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
-  const products = await Product.findByPk(req.params.id, {include: [{ model: Category }, { model: Tag }]});
+  const data = await Product.findByPk(req.params.id, {include: [{ model: Category }, { model: Tag }]});
+  res.status(200).json(data)
 } catch (err){
   res.status(400).json(err)
 }
 });
 
 // create new product
-router.post('/', async (req, res) => {
+router.post('/', (req, res) => {
   /* req.body should look like this...
     {
       product_name: "Basketball",
@@ -59,7 +60,7 @@ router.post('/', async (req, res) => {
 });
 
 // update product
-router.put('/:id', async (req, res) => {
+router.put('/:id', (req, res) => {
   // update product data
   Product.update(req.body, {
     where: {
