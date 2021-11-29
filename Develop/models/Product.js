@@ -28,19 +28,19 @@ Product.init(
     },
     stock: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      // allowNull: false,
       defaultValue: 10,
-      validate: {
-        isNum: true,
-      }
+      // validate: {
+      //   isNum: true,
+      // },
     },
     category_id: {
       type: DataTypes.INTEGER,
-references: {
-  model: 'category',
-  key: 'id',
-  unique: false
-}    },
+      references: {
+        model: "category",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,
