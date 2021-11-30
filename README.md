@@ -25,8 +25,8 @@ To run this application:
 ## <a name=Contributors>Contributors</a>
 Feel free to for and submit issues if they exist
 ## <a name=Contact>Contact</a>
-Github Link: \
-Contact via email here
+Github Link: https://github.com/Konado22/E-commerce-back-end <br>
+Contact via email: jessedraper2@gmail.com
 
 
  
