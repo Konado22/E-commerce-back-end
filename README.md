@@ -7,12 +7,12 @@
 - [Contributors](#Contributors)
 - [Contact](#Contact)
 ## <a name=Walkthrough>Walkthrough</a>
-Link to video here:
+Link to video here: https://watch.screencastify.com/v/w4tPTGfEU9gueUXTjdja
 ## <a name=Description> Description</a>
 This is a project made to demonstrate usage of a backend application. Using node and mysql we are able to generate responses based off GET,Post, and PUSH routes. Using models we can direct the requests to the proper information. 
 ## <a name=Installation>Installation</a>
 To use application please clone repository 
-From there run npm init and npm install to install the following dependencies 
+From there run npm init and npm install to install the following dependencies to manually require: <br>
 - Sequelize (npm i sequelize) 
 - Express ( npm i express) 
 - Dotenv (npm i dotenv) 
@@ -23,7 +23,7 @@ To run this application:
 - seed the database with "npm run seed" 
 - "npm start" or "npm run watch" will start the server
 ## <a name=Contributors>Contributors</a>
-Feel free to for and submit issues if they exist
+Feel free to test and submit issues if they exist
 ## <a name=Contact>Contact</a>
 Github Link: https://github.com/Konado22/E-commerce-back-end <br>
 Contact via email: jessedraper2@gmail.com
